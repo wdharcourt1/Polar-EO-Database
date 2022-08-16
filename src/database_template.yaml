@@ -18,7 +18,7 @@
 #   marked with an asterisk (EVs*). Fields without
 #   pre-defined values have EVs set to None.
 
-# comment about entry name
+# comment about satellite name
 # EVs: None
 Name: temp_name
 
@@ -26,38 +26,47 @@ Name: temp_name
 # EVs: None
 Signal/sensor/instrument type: altimeter
 
+# comment about temporal coverage (date range as YYYY-MM-DD_YYY-MM-DD)
+# EVs: None
+temporal coverage: 2016-04-26_2021-12-03
+
+# comment about temporal resolution (free text, can be general (daily), or more specific if known)
+# EVs: None
+temporal resolution: daily
+
+# comment about spatial region
+# EVs*: Arctic, Antarctica, Himalayas, worldwide
+spatial region: worldwide
+
+# comment about spatial region
+# EVs*: Russian Arctic, Svalbard
+spatial subregion: Svalbard
+
+# comment about spatial/angular resolution
+# EVs*: 
+spatial/angular resolution: 1 m
+
 # comment about data set level
-# EVs: L1 (raw), L2 (processed)
+# EVs: L0 (raw), L1 (processed), L2 (corrected)
 data set level: L1
 
 # is the data in open access?
-# EVs: True, False
+# EVs: True, False, True (Proposal)
 open access: True
 
 # comment about data access platform
 # EVs: None
 data access platform: https://nsidc.org/data/nsidc-0478
 
-# comment about regions covered
-# EVs*: Arctic, Antarctica, Himalayas, worldwide
-regions covered: worldwide
+# comment about data access server
+# EVs: None
+data access server: https://nsidc.org/data/nsidc-0478
 
-# softwares known to be used for the data set processing and analysis
-# EVs*: Python, Matlab, R, C, C++, Fortran, Excel (please, no)
-processing software:
-  - Python
-  - Matlab
-  - R
+# comment about data access server
+# EVs: geotiff, SLC
+data type: geotiff
 
 # fields known to be using this data set
-# EVs*: Glaciology, Sea ice, Climate Science, Ecology, Oceanography,
-#       Geology, Hydrology
-scientific application:
+# EVs*: Classified scientific application.
+polar application:
   - Glaciology
-  - Sea ice
-  
-# comment about parameters sought
-# EVs*: Mass, ice velocity, thickness, NDVI
-parameters sought:
-  - ice velocity
-  - mass
